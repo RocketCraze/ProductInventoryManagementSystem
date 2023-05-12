@@ -4,6 +4,12 @@
 
     public interface IProductInventoryService
     {
-        List<ProductInventory> GetAll();      
+        List<ProductInventory> GetAll();   
+        
+        void Add(ProductInventory product);
+
+        void Update(ProductInventory product);
+
+        void Delete(int id);
     }
 }

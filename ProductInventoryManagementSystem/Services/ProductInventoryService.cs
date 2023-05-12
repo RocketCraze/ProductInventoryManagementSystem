@@ -18,6 +18,23 @@
             return this.context.Set<ProductInventory>().ToList();
         }
 
-        
+        public void Add(ProductInventory productInventory)
+        {
+            this.context.Set<ProductInventory>().Add(productInventory);
+            this.context.SaveChanges();
+        }
+
+        public void Update(ProductInventory productInventory) 
+        {
+            this.context.Set<ProductInventory>().Attach(productInventory);
+            this.context.SaveChanges();
+        }
+
+        public void Delete(int id)
+        {
+            ProductInventory productInventory = this.context.Set<ProductInventory>().Find(id);
+            this.context.Remove(productInventory);
+            this.context.SaveChanges();
+        }
     }
 }

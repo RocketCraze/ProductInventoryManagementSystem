@@ -5,14 +5,31 @@
 
 @(Html.DevExtreme().DataGrid<ProductInventory>()
     .ShowBorders(true)
-    .DataSource(_ => _.Mvc().Controller("ProductInventoryWebAPI").LoadAction("GetProductInventory").Key("ProductID"))
-    .Columns(columns => {
-        columns.AddFor(_ => _.ProductName);
-        columns.AddFor(_ => _.Description);
-        columns.AddFor(_ => _.Type);
-        columns.AddFor(_ => _.Price);
-        columns.AddFor(_ => _.Quantity);
+    .DataSource(_ => _
+        .Mvc()
+        .Controller("ProductInventoryWebAPI")
+        .LoadAction("GetProductInventory")
+        .InsertAction("Create")
+        .UpdateAction("Update")
+        .DeleteAction("Delete")
+        .Key("ProductID"))
+    .Columns(_ => {
+        _.AddFor(_ => _.ProductID);
+        _.AddFor(_ => _.ProductName);
+        _.AddFor(_ => _.Description);
+        _.AddFor(_ => _.Type);
+        _.AddFor(_ => _.Price);
+        _.AddFor(_ => _.Quantity);
     })
+    .Editing(_ => _
+        .Mode(GridEditMode.Form)
+        .UseIcons(true)
+        .Texts(_ => _.AddRow("Add Item"))
+        .AllowAdding(true)
+        .AllowUpdating(true)
+        .AllowDeleting(true)
+        .RefreshMode(GridEditRefreshMode.Reshape)
+    )
     .Paging(p => p.PageSize(10))
     .FilterRow(f => f.Visible(true))
     .HeaderFilter(f => f.Visible(true))
@@ -27,4 +44,12 @@
             groupItems.Add().SummaryType(SummaryType.Count);
         })
     )
+    .Toolbar(toolbar =>
+    {
+        toolbar.Items(_ => _
+            .Add()
+            .Name("addRowButton")
+            .ShowText(ToolbarItemShowTextMode.Always)
+        );
+    })
 )
