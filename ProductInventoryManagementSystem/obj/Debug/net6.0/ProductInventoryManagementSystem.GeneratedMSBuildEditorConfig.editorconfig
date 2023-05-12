@@ -16,22 +16,22 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\leonlr\OneDrive - PaySpace\Documents\ProductInventoryManagementSystem\ProductInventoryManagementSystem
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/leonlr/OneDrive - PaySpace/Documents/ProductInventoryManagementSystem/ProductInventoryManagementSystem/Pages/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+[C:/Users/leonlr/OneDrive - PaySpace/Documents/ProductInventoryManagementSystem/ProductInventoryManagementSystem/Views/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/leonlr/OneDrive - PaySpace/Documents/ProductInventoryManagementSystem/ProductInventoryManagementSystem/Pages/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+[C:/Users/leonlr/OneDrive - PaySpace/Documents/ProductInventoryManagementSystem/ProductInventoryManagementSystem/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/leonlr/OneDrive - PaySpace/Documents/ProductInventoryManagementSystem/ProductInventoryManagementSystem/Pages/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+[C:/Users/leonlr/OneDrive - PaySpace/Documents/ProductInventoryManagementSystem/ProductInventoryManagementSystem/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/leonlr/OneDrive - PaySpace/Documents/ProductInventoryManagementSystem/ProductInventoryManagementSystem/Pages/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[C:/Users/leonlr/OneDrive - PaySpace/Documents/ProductInventoryManagementSystem/ProductInventoryManagementSystem/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/leonlr/OneDrive - PaySpace/Documents/ProductInventoryManagementSystem/ProductInventoryManagementSystem/Pages/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+[C:/Users/leonlr/OneDrive - PaySpace/Documents/ProductInventoryManagementSystem/ProductInventoryManagementSystem/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

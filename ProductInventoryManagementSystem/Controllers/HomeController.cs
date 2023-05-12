@@ -1,7 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-namespace ProductInventoryManagementSystem.Controllers
+﻿namespace ProductInventoryManagementSystem.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
     public class HomeController : Controller
     {
         public IActionResult Index()
