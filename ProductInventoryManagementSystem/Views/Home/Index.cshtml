@@ -35,8 +35,8 @@
             .Caption("Price (Rand)")
             .Format("R ###,###,###.##");
         _.AddFor(_ => _.Quantity)
-        .DataType(GridColumnDataType.Number)
-        .EditorOptions(new {showSpinButtons = true});
+            .DataType(GridColumnDataType.Number)
+            .EditorOptions(new {showSpinButtons = true});
     })
     .Editing(_ => _
         .Mode(GridEditMode.Form)

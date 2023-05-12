@@ -1,0 +1,15 @@
+INSERT INTO ProductInventory
+VALUES	('Cessna', '152', 'Small single-engine aircraft', 'Single-Engine', 500000.00, 5),
+		('Cessna', '172 Skyhawk', 'Small single-engine aircraft', 'Single-Engine', 750000.00, 7),
+		('Cessna', '182 Skylane', 'Small single-engine aircraft', 'Single-Engine', 1000000.00, 2),
+		('Cessna', '206 Stationair', 'Small single-engine aircraft', 'Single-Engine', 1250000.00, 3),
+		('Cessna', '208 Caravan', 'Single-engine turbine', 'Single-Engine', 3000000.00, 4),
+		('Cessna', '210 Centurion', 'Small single-engine aircraft', 'Single-Engine', 1250000.00, 2),
+		('Piper', 'J-3 Cub', 'Small single-engine aircraft', 'Single-Engine', 450000.00, 1),
+		('Piper', 'PA-28 Cherokee', 'Small single-engine aircraft', 'Single-Engine', 600000.00, 4),
+		('Piper', 'PA-24 Comanche', 'Small twin-engine aircraft', 'Multi-Engine', 1700000.00, 1),
+		('Piper', 'PA-34 Seneca', 'Small twin-engine aircraft', 'Multi-Engine', 2200000.00, 1),
+		('Robinson', 'R22', 'Light helicopter', 'Rotorcraft', 1400000.00, 3),
+		('Robinson', 'R44', 'Light helicopter', 'Rotorcraft', 1800000.00, 2),
+		('Bell', '206', 'Medium helicoper', 'Rotorcraft', 3500000.00, 3),
+		('Bell', 'UH-1 Iroquois', 'Medium helicoper', 'Rotorcraft', 4200000.00, 1)
