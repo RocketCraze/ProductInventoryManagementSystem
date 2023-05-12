@@ -1,7 +1,11 @@
 @page
 @using ProductInventoryManagementSystem.Models
 
-<h2>Home</h2>
+<h2>Aircraft Inventory</h2>
+
+<head>
+    <link rel="stylesheet" href="~/css/stylesheet.css" />
+</head>
 
 @(Html.DevExtreme().DataGrid<ProductInventory>()
     .ShowBorders(true)
@@ -42,19 +46,16 @@
         .AllowDeleting(true)
         .RefreshMode(GridEditRefreshMode.Reshape)
     )
-    .Paging(p => p.PageSize(10))
-    .FilterRow(f => f.Visible(true))
-    .HeaderFilter(f => f.Visible(true))
-    .GroupPanel(p => p.Visible(true))
-    .Grouping(g => g.AutoExpandAll(false))
+    .Paging(_ => _.PageSize(10))
+    .FilterRow(_ => _.Visible(true))
+    .HeaderFilter(_ => _.Visible(true))
+    .GroupPanel(_ => _.Visible(true))
+    .Grouping(_ => _.AutoExpandAll(false))
     .RemoteOperations(true)
     .Summary(s => s
         .TotalItems(totalItems => {
-            totalItems.AddFor(_ => _.Quantity).SummaryType(SummaryType.Count);
-        })
-        .GroupItems(groupItems => {
-            groupItems.Add().SummaryType(SummaryType.Count);
-        })
+            totalItems.AddFor(_ => _.Quantity).SummaryType(SummaryType.Sum);
+        })        
     )
     .Toolbar(toolbar =>
     {
@@ -65,3 +66,11 @@
         );
     })
 )
+
+<style>
+    body {
+        background-image: url("https://i0.wp.com/airportscouncil.org/wp-content/uploads/2018/10/New-Cover-Photo.jpg"); 
+        background-size: cover;
+        
+    }
+</style>
