@@ -6,7 +6,7 @@
     using Microsoft.AspNetCore.Mvc;
 
     using Newtonsoft.Json;
-
+    using ProductInventoryManagementSystem.Data;
     using ProductInventoryManagementSystem.Interfaces;
     using ProductInventoryManagementSystem.Models;
 
@@ -18,6 +18,12 @@
         public ProductInventoryWebAPIController(IProductInventoryService productInventoryService)
         {
             this.productInventoryService = productInventoryService;
+        }
+
+        [HttpGet]
+        public object GetTypes(DataSourceLoadOptions loadOptions)
+        {
+            return DataSourceLoader.Load(Types.Type, loadOptions);
         }
 
         [HttpGet("/GetProductInventory")]

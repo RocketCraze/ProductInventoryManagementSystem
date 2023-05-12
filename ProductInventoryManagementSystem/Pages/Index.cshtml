@@ -17,7 +17,17 @@
         _.AddFor(_ => _.ProductID);
         _.AddFor(_ => _.ProductName);
         _.AddFor(_ => _.Description);
-        _.AddFor(_ => _.Type);
+        _.AddFor(_ => _.Type)
+            .Lookup(_ => _
+                .DataSource(_ => _
+                    .Mvc()
+                    .Controller("ProductInventoryWebAPI")
+                    .LoadAction("GetTypes")
+                    .Key("ID")                
+                )
+                .DisplayExpr("Type")
+                .ValueExpr("Type")
+                );
         _.AddFor(_ => _.Price);
         _.AddFor(_ => _.Quantity);
     })
