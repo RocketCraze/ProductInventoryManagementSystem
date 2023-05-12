@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "PfzZJrsfD5qst3swlupJ/GlldTdjhscWhuWHAKr8WYNlz19qjWwYIcPk9dDacgsjIz3bOCgW+V+nzjI+MZublA==",
+  "dgSpecHash": "pSjnHCOoqTGGzf7ASMj9GphpKLxUrNoiNHKlw6yYZvbEF084Fw9jO4qW2mKgEIvPwq5wXqNEKo5qVQ/3Y6UKWQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\leonlr\\OneDrive - PaySpace\\Documents\\ProductInventoryManagementSystem\\ProductInventoryManagementSystem\\ProductInventoryManagementSystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\leonlr\\.nuget\\packages\\devextreme.aspnet.core\\22.2.4\\devextreme.aspnet.core.22.2.4.nupkg.sha512",
     "C:\\Users\\leonlr\\.nuget\\packages\\devextreme.aspnet.data\\2.9.0\\devextreme.aspnet.data.2.9.0.nupkg.sha512",
+    "C:\\Users\\leonlr\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
+    "C:\\Users\\leonlr\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\leonlr\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "C:\\Users\\leonlr\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\leonlr\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\leonlr\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",

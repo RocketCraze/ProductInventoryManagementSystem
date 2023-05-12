@@ -84,3 +84,6 @@ C:\Users\leonlr\OneDrive - PaySpace\Documents\ProductInventoryManagementSystem\P
 C:\Users\leonlr\OneDrive - PaySpace\Documents\ProductInventoryManagementSystem\ProductInventoryManagementSystem\obj\Debug\net6.0\ProductInventoryManagementSystem.pdb
 C:\Users\leonlr\OneDrive - PaySpace\Documents\ProductInventoryManagementSystem\ProductInventoryManagementSystem\obj\Debug\net6.0\ProductInventoryManagementSystem.genruntimeconfig.cache
 C:\Users\leonlr\OneDrive - PaySpace\Documents\ProductInventoryManagementSystem\ProductInventoryManagementSystem\obj\Debug\net6.0\ref\ProductInventoryManagementSystem.dll
+C:\Users\leonlr\OneDrive - PaySpace\Documents\ProductInventoryManagementSystem\ProductInventoryManagementSystem\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\leonlr\OneDrive - PaySpace\Documents\ProductInventoryManagementSystem\ProductInventoryManagementSystem\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+C:\Users\leonlr\OneDrive - PaySpace\Documents\ProductInventoryManagementSystem\ProductInventoryManagementSystem\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll

@@ -9,8 +9,11 @@
         [Column("pkProductID")]
         public int ProductID { get; set; }
 
-        [Column("ProductName")]
-        public string ProductName { get; set; }
+        [Column("Make")]
+        public string Make { get; set; }
+
+        [Column("Model")]
+        public string Model { get; set; }
 
         [Column("Description")]
         public string Description { get; set; }
@@ -19,9 +22,9 @@
         public string Type { get; set; }
 
         [Column("Price")]
-        public double Price { get; set; }
+        public double? Price { get; set; }
 
         [Column("Quantity")]
-        public int Quantity { get; set; }
+        public int? Quantity { get; set; }
     }
 }

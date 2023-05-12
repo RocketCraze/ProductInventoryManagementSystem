@@ -14,8 +14,8 @@
         .DeleteAction("Delete")
         .Key("ProductID"))
     .Columns(_ => {
-        _.AddFor(_ => _.ProductID);
-        _.AddFor(_ => _.ProductName);
+        _.AddFor(_ => _.Make);
+        _.AddFor(_ => _.Model);
         _.AddFor(_ => _.Description);
         _.AddFor(_ => _.Type)
             .Lookup(_ => _
@@ -28,7 +28,9 @@
                 .DisplayExpr("Type")
                 .ValueExpr("Type")
                 );
-        _.AddFor(_ => _.Price);
+        _.AddFor(_ => _.Price)
+            .Caption("Price (Rand)")
+            .Format("R ###,###,###.##");
         _.AddFor(_ => _.Quantity);
     })
     .Editing(_ => _

@@ -2,9 +2,10 @@
 {
     using DevExtreme.AspNet.Data;
     using DevExtreme.AspNet.Mvc;
-
+    using FluentValidation;
+    using FluentValidation.AspNetCore;
     using Microsoft.AspNetCore.Mvc;
-
+    using Microsoft.AspNetCore.Mvc.ModelBinding;
     using Newtonsoft.Json;
     using ProductInventoryManagementSystem.Data;
     using ProductInventoryManagementSystem.Interfaces;
@@ -14,10 +15,12 @@
     public class ProductInventoryWebAPIController : Controller
     {
         private readonly IProductInventoryService productInventoryService;
+        private readonly IValidator<ProductInventory> validator;
 
-        public ProductInventoryWebAPIController(IProductInventoryService productInventoryService)
+        public ProductInventoryWebAPIController(IProductInventoryService productInventoryService, IValidator<ProductInventory> validator)
         {
             this.productInventoryService = productInventoryService;
+            this.validator = validator;
         }
 
         [HttpGet]
@@ -42,6 +45,13 @@
             var model = new ProductInventory();
             JsonConvert.PopulateObject(values, model);
 
+            var result = this.validator.Validate(model, _ => _.IncludeRuleSets("Create"));
+            if (!result.IsValid)
+            {
+                result.AddToModelState(this.ModelState);
+                return this.BadRequest(this.ModelState.ToFullErrorString());
+            }
+
             this.productInventoryService.Add(model);
 
             return this.Ok();
@@ -53,6 +63,13 @@
             var model = this.productInventoryService.GetAll().First(_ => _.ProductID == key);
             JsonConvert.PopulateObject(values, model);
 
+            var result = this.validator.Validate(model, _ => _.IncludeRuleSets("Update"));
+            if (!result.IsValid)
+            {
+                result.AddToModelState(this.ModelState);
+                return this.BadRequest(this.ModelState.ToFullErrorString());
+            }
+
             this.productInventoryService.Update(model);
 
             return this.Ok();
@@ -62,6 +79,14 @@
         public IActionResult Delete(int key)
         {
             var model = this.productInventoryService.GetAll().First(_ => _.ProductID == key);
+
+            var result = this.validator.Validate(model, _ => _.IncludeRuleSets("Delete"));
+            if (!result.IsValid)
+            {
+                result.AddToModelState(this.ModelState);
+                return this.BadRequest(this.ModelState.ToFullErrorString());
+            }
+
             this.productInventoryService.Delete(key);
 
             return this.Ok();

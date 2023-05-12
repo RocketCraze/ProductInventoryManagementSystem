@@ -1,10 +1,13 @@
 namespace ProductInventoryManagementSystem
 {
+    using FluentValidation;
     using Microsoft.EntityFrameworkCore;
 
     using ProductInventoryManagementSystem.Data;
     using ProductInventoryManagementSystem.Interfaces;
+    using ProductInventoryManagementSystem.Models;
     using ProductInventoryManagementSystem.Services;
+    using ProductInventoryManagementSystem.Validators;
 
     public static class Program
     {
@@ -18,6 +21,7 @@ namespace ProductInventoryManagementSystem
             // Add services to the container.
             builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
             builder.Services.AddScoped<IProductInventoryService, ProductInventoryService>();
+            builder.Services.AddScoped<IValidator<ProductInventory>, ProductInventoryValidator>();
 
             builder.Services
             .AddRazorPages()
