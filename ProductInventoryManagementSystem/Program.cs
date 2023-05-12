@@ -3,6 +3,8 @@ namespace ProductInventoryManagementSystem
     using Microsoft.EntityFrameworkCore;
 
     using ProductInventoryManagementSystem.Data;
+    using ProductInventoryManagementSystem.Interfaces;
+    using ProductInventoryManagementSystem.Services;
 
     public static class Program
     {
@@ -15,6 +17,7 @@ namespace ProductInventoryManagementSystem
 
             // Add services to the container.
             builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+            builder.Services.AddScoped<IProductInventoryService, ProductInventoryService>();
 
             builder.Services
             .AddRazorPages()
@@ -34,6 +37,9 @@ namespace ProductInventoryManagementSystem
             app.UseAuthorization();
 
             app.MapControllers();
+            app.MapControllerRoute(
+                name: "default",
+                pattern: "{controller=Home}/{action=Index}/{id?}");
             app.MapDefaultControllerRoute();
             app.MapRazorPages();
 

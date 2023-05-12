@@ -19,7 +19,7 @@
         public string Type { get; set; }
 
         [Column("Price")]
-        public float Price { get; set; }
+        public double Price { get; set; }
 
         [Column("Quantity")]
         public int Quantity { get; set; }
